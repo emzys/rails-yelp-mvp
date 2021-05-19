@@ -1,0 +1,11 @@
+<div class="container mt-3">
+  <%= link_to restaurants_path, class: 'btn-light m-3' do %>
+    <p><i class="fas fa-undo m-1"></i> BACK TO ALL</p>
+  <% end %>
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-8 col-lg-6">
+      <h1>Add a restaurant</h1>
+      <%= render 'restaurants/form' %>
+    </div>
+  </div>
+</div>

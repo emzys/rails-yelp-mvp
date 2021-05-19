@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <%= link_to restaurants_path, class: 'btn-light' do %>
+    <p><i class="fas fa-undo m-1"></i> BACK TO ALL</p>
+  <% end %>
+
+  <div class="card-restaurant">
+    <%= image_tag "https://source.unsplash.com/1200x300/?dish #{@restaurant.category}" %>
+    <div class="card-restaurant-infos">
+      <div>
+        <h2><%= @restaurant.name %></h2>
+        <p><%= @restaurant.address %></p>
+        <p><%= @restaurant.category %></p>
+      </div>
+      <h2 class="card-restaurant-pricing"><%= @restaurant.phone_number %></h2>
+      <%= link_to new_restaurant_review_path(@restaurant) do %>
+        <p><i class="fas fa-plus m-2"></i>Add new review</p>
+      <% end %>
+    </div>
+    <div class="reviews m-3">
+      <% if @restaurant.reviews.any? %>
+        <h2>Reviews ( <%= @restaurant.reviews.count %> )</h2>
+        <% @restaurant.reviews.each do |review| %>
+          <hr>
+          <p> <%= '⭐️' * review.rating %> </p>
+          <p> <%= review.content %> </p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

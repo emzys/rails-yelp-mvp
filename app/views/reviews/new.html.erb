@@ -1,0 +1,11 @@
+<div class="container">
+  <%= link_to restaurants_path, class: 'btn-light m-3' do %>
+    <p><i class="fas fa-undo m-1"></i> BACK TO ALL</p>
+  <% end %>
+  <h1>Add a Review <%= @restaurant.name %></h1>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :rating, collection: (0..5), include_blank: false %>
+    <%= f.input :content %>
+    <%= f.submit class: 'btn btn-primary mt-3' %>
+  <% end %>
+</div>

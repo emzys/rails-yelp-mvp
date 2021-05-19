@@ -7,9 +7,10 @@
 .card-product {
   position: relative;
   overflow: hidden;
-  height: 120px;
+  height: 160px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // border-radius: 4px;
   display: flex;
   align-items: center;
 }
@@ -61,12 +62,14 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  border-radius: 4px;
 }
 
 .card-restaurant p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  // border-radius: 4px;
 }
 
 
@@ -74,7 +77,7 @@
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  // align-items: flex-end;
   position: relative;
 }
 
@@ -88,4 +91,9 @@
 a {
   color: black;
   text-decoration: none;
+  // border-radius: 4px;
 }
+
+// .btn {
+//   color: white;
+// }

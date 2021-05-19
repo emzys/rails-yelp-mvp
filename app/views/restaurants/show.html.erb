@@ -3,18 +3,20 @@
     <p><i class="fas fa-undo m-1"></i> BACK TO ALL</p>
   <% end %>
 
-  <div class="card-restaurant">
+  <div class="card-restaurant rounded">
     <%= image_tag "https://source.unsplash.com/1200x300/?dish #{@restaurant.category}" %>
     <div class="card-restaurant-infos">
       <div>
         <h2><%= @restaurant.name %></h2>
-        <p><%= @restaurant.address %></p>
-        <p><%= @restaurant.category %></p>
+        <p>Address:<%= @restaurant.address %></p>
+        <p>Category: <%= @restaurant.category %></p>
+        <p class="card-restaurant-pricing">Phone: <%= @restaurant.phone_number %></p>
       </div>
-      <h2 class="card-restaurant-pricing"><%= @restaurant.phone_number %></h2>
-      <%= link_to new_restaurant_review_path(@restaurant) do %>
-        <p><i class="fas fa-plus m-2"></i>Add new review</p>
-      <% end %>
+      <div>
+        <%= link_to new_restaurant_review_path(@restaurant), class: 'btn btn-info' do %>
+          <p><strong><i class="fas fa-plus mr-2"></i> Add new review</strong></p>
+        <% end %>
+      </div>
     </div>
     <div class="reviews m-3">
       <% if @restaurant.reviews.any? %>

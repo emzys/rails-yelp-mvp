@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 
 # ADDED
 gem 'autoprefixer-rails'
+gem 'faker'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 
